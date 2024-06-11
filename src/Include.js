@@ -4,8 +4,8 @@ class Include {
     this.val2 = val2
   }
 
-  checkInclude() {
-    if (this.val1 instanceof String || this.val1 instanceof Array) {
+  check() {
+    if (typeof this.val1 === 'string' || Array.isArray(this.val1)) {
       return this.val1.includes(this.val2)
     }
     return false
